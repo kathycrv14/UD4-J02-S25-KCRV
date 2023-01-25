@@ -11,6 +11,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { AppRoutingModule } from '../app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -20,6 +22,9 @@ import { MatMenuModule } from '@angular/material/menu';
     DashboardComponent
   ],
   imports: [
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     LayoutModule,
     MatToolbarModule,

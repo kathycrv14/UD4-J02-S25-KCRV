@@ -4,13 +4,13 @@
             <h2>registro</h2>        
         </section>
         <section class="sectionImagen">
-            <img src="./assets/maracuya.png">
+            <img src="./assets/fresa.png">
         </section>
         <section class="sectionMat">
             <mat-form-field class="example-form-field">
-                <mat-label>Clearable input</mat-label>
-                <input matInput  type="text" id="username">
-                <button matSuffix mat-icon-button aria-label="Clear" type="text" id="username">
+                <mat-label>Nombre</mat-label>
+                <input matInput type="text" id="nombre">
+                <button matSuffix mat-icon-button aria-label="Clear" type="text" id="nombre">
                     <mat-icon>close</mat-icon>
                 </button>
             </mat-form-field>            
@@ -18,7 +18,27 @@
 
         <section class="sectionMat">
             <mat-form-field class="example-form-field">
-                <mat-label>Enter your password</mat-label>
+                <mat-label>Apellido</mat-label>
+                <input matInput type="text" id="apellido">
+                <button matSuffix mat-icon-button aria-label="Clear" type="text" id="apellido">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </section>
+
+        <section class="sectionMat">
+            <mat-form-field class="example-form-field">
+                <mat-label>Correo</mat-label>
+                <input matInput type="text" id="correo">
+                <button matSuffix mat-icon-button aria-label="Clear" type="text" id="correo">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>            
+        </section>
+
+        <section class="sectionMat">
+            <mat-form-field class="example-form-field">
+                <mat-label>Password</mat-label>
                 <input matInput [type]="hide ? 'password' : 'text'">
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide"  type="text" id="password">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>

@@ -15,13 +15,14 @@ const routes: Routes = [
   {path: 'formulario', component: FormularioComponent, canActivate: [CanactivateGuard]},
   {path: 'busqueda', component: BusquedaComponent, canActivate: [CanactivateGuard]},
 
-  {path: 'dashboard', component: DashboardComponent},
+  {path: 'dashboard', component: DashboardComponent, canActivate: [CanactivateGuard]},
+
   {path: '', component: LoginComponent},
-  {path: 'login', component: LoginComponent, canDeactivate: [CandesactivateGuard]},
+  {path: 'login', component: LoginComponent},
 
   {path: 'mensaje', component: MensajeComponent, canActivate: [CanactivateGuard], canDeactivate: [CandesactivateGuard]},
 
-  {path: 'operacion', component: OperacionComponent, canActivate: [CanactivateGuard], canDeactivate: [CandesactivateGuard]},
+  {path: 'operacion', component: OperacionComponent, canActivate: [CanactivateGuard]},
 
 ];
 

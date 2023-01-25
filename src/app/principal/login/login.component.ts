@@ -17,7 +17,7 @@ export class LoginComponent {
     this.autenticacion.login();
     this.redireccion = this.autenticacion.urlUsuarioIntentaAcceder;
     this.autenticacion.urlUsuarioIntentaAcceder = '';
-    this.router.navigate([this.redireccion]);
+    this.router.navigate(['/formulario']);
   }
   
   // Angular Material

@@ -17,6 +17,9 @@ h2{
     justify-content: center;
     display: flex;
     flex: wrap;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 img{
@@ -29,14 +32,18 @@ img{
     display: block;
     flex: wrap;
 
-    margin-top: 5rem;
-}
-
-.sectionMat{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .sectionButton{
     text-align: center;
+}
+
+.sectionMat{
+    width: 30rem;
+}
+
+mat-form-field{
+    width: 30rem;
 }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
 
 @Component({
   selector: 'app-navigation',
@@ -16,6 +17,18 @@ export class NavigationComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, public autenticacion: AutenticacionService) {}
 
+  usuariologueado = false;
+  
+  ngOnInit(){
+    this.usuariologueado = this.autenticacion.isLoggedIn('');
+    this.autenticacion.changeLoginStatus$.subscribe(
+    (loggedSatus: boolean) => this.usuariologueado = loggedSatus
+    );
+  }
+  
+  logout(){
+    this.autenticacion.logout();
+  }
 }

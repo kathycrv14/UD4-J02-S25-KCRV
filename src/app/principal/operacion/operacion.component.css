@@ -1,0 +1,73 @@
+.sectionGeneral{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: wrap;
+}
+
+h2{
+    letter-spacing: 0.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.sectionForm{
+    width: 30%;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+.form-group{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: wrap;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.operacion{
+    align-items: center;
+    justify-content: start;
+}
+
+.sectionTable{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: wrap;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+thead{
+    border-bottom: 2px solid black;
+
+}
+
+th{
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgb(193, 247, 255);
+}
+
+td{
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+

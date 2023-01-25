@@ -1,0 +1,70 @@
+<section class="sectionGeneral">
+    <section class="sectionForm">
+        <h2>operaciones matematicas</h2>
+        <form class="example-form">
+            <section class="form-group">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Ingrese el primer valor:</mat-label>
+                    <input matInput placeholder="Escriba un numero" type="number" name = "valor1" [(ngModel)] = "valor1">
+                </mat-form-field>                
+            </section>
+
+            <section class="form-group">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Ingrese el segundo valor:</mat-label>
+                    <input matInput placeholder="Escriba un numero" type="number" name = "valor1" [(ngModel)] = "valor2">
+                </mat-form-field>                
+            </section>
+
+            <section>
+                <section class="form-group operacion">
+                    <mat-slide-toggle name = "toggleSumar" [(ngModel)] = "toggleSumar" (change)="tSumar()">Sumar</mat-slide-toggle>
+                </section>
+                <section class="form-group operacion">
+                    <mat-slide-toggle name = "toggleRestar" [(ngModel)] = "toggleRestar" (change)="tRestar()" >Restar</mat-slide-toggle>
+                </section>
+                <section class="form-group operacion">
+                    <mat-slide-toggle name = "toggleMultiplicar" [(ngModel)] = "toggleMultiplicar" (change)="tMultiplicar()">Multiplicar</mat-slide-toggle>
+                </section>
+                <section class="form-group operacion">
+                    <mat-slide-toggle name = "toggleDividir" [(ngModel)] = "toggleDividir" (change)="tDividir()">Dividir</mat-slide-toggle>
+                </section>                
+            </section>
+            
+        </form>
+        <section class="sectionTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>operacion</th>
+                        <th>resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td *ngIf="toggleSumar">Suma</td>
+                        <td *ngIf="toggleSumar">{{ resultado }}</td>
+                    </tr>
+                    <tr>
+                        <td *ngIf="toggleRestar">Resta</td>
+                        <td *ngIf="toggleRestar">{{ resultado1 }}</td>
+                    </tr>
+                    <tr>
+                        <td *ngIf="toggleMultiplicar">Multiplicacion</td>
+                        <td *ngIf="toggleMultiplicar">{{ resultado2 }}</td>
+                    </tr>
+                    <tr>
+                        <td *ngIf="toggleDividir">Division</td>
+                        <td *ngIf="toggleDividir">{{ resultado3 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+</section> 
+
+
+
+
+
+

@@ -1,4 +1,38 @@
-<h2>Iniciar sesion</h2>
+<section class="sectionGeneral">
+    <section class="sectionForm">
+        <section>
+            <h2>login</h2>        
+        </section>
+        <section class="sectionImagen">
+            <img src="./assets/maracuya.png">
+        </section>
+        <section class="sectionMat">
+            <mat-form-field class="example-form-field">
+                <mat-label>Clearable input</mat-label>
+                <input matInput  type="text" id="username">
+                <button matSuffix mat-icon-button aria-label="Clear" type="text" id="username">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>            
+        </section>
+
+        <section class="sectionMat">
+            <mat-form-field class="example-form-field">
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" type="text" id="password">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide"  type="text" id="password">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>            
+        </section>
+
+        <section class="sectionButton">
+            <button mat-raised-button color="primary" type="button" (click)="login()" value="Log in">Login</button>
+        </section>         
+    </section>
+</section>
+
+<!-- <h2>Iniciar sesion</h2>
 <section class="container-sm">
     <section class="col-3">
         <section class="form-group">
@@ -11,4 +45,4 @@
     </section>
         <input type="button" class="btn btn-primary" (click)="login()" value="Log in">
     </section>
-</section>
+</section> -->

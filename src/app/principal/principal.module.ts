@@ -14,6 +14,15 @@ import { OperacionComponent } from './operacion/operacion.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button'
+import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
+
+
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatCardModule} from '@angular/material/card';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -34,7 +43,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     //Angular Material
     MatInputModule,
     MatSlideToggleModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTabsModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatDividerModule,
+    MatTableModule,
   ],
   exports:[
     MenuComponent,
@@ -48,7 +64,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     //Angular Material
     MatInputModule,
     MatSlideToggleModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTabsModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatDividerModule,
+    MatTableModule,
   ]
 })
 export class PrincipalModule { }

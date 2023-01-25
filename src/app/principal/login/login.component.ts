@@ -20,4 +20,6 @@ export class LoginComponent {
     this.router.navigate([this.redireccion]);
   }
   
+  // Angular Material
+  hide = true;
 }

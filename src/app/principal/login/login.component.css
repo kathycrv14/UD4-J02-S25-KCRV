@@ -1,0 +1,43 @@
+.sectionGeneral{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: wrap;
+}
+
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-weight: bolder;
+
+}
+.sectionImagen{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: wrap;
+}
+
+img{
+    width: 8rem;
+}
+
+.sectionForm{
+    align-items: center;
+    justify-content: center;
+    display: block;
+    flex: wrap;
+
+    margin-top: 5rem;
+}
+
+.sectionMat{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.sectionButton{
+    text-align: center;
+}
+

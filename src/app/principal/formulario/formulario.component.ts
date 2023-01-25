@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Users } from 'src/app/models/users';
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { UserserviceService } from 'src/app/services/userservice.service';
 
 @Component({
@@ -9,7 +11,7 @@ import { UserserviceService } from 'src/app/services/userservice.service';
 })
 export class FormularioComponent {
 
-  constructor(private userService: UserserviceService){}
+  constructor(private userService: UserserviceService, private autenticacion: AutenticacionService, private router: Router){}
 
   // Crear objeto que se evniara a al api
   datos: Users = {id: '', name: '', username:''};
@@ -20,4 +22,15 @@ export class FormularioComponent {
     );
   }
   
+    // Angular Material
+
+    redireccion = '';
+  
+    login(){
+      this.autenticacion.login();
+      this.redireccion = this.autenticacion.urlUsuarioIntentaAcceder;
+      this.autenticacion.urlUsuarioIntentaAcceder = '';
+      this.router.navigate([this.redireccion]);
+    }
+    hide = true;
 }

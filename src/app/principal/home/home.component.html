@@ -1,0 +1,47 @@
+<section class="container">
+  <section class="row">
+      <section class="col">
+          <mat-card class="bg-1 d-flex justify-content-center flex-wrap nowrap ">
+              <section>
+                <section class="card-title" >Total de Usuarios</section>
+              </section>
+              <section class="card-text d-flex justify-content-center align-items-center">
+                <section>{{ totalUsers }}</section>
+                <img src="./assets/user-avatar.png" alt="">
+              </section>
+            </mat-card>
+          
+          <mat-card class="bg-2 d-flex justify-content-center flex-wrap nowrap">
+              <section>
+                  <section class="card-title" >Usuarios con rol "User"</section>
+                </section>
+                <section class="card-text d-flex justify-content-center align-items-center">
+                      <section>{{ usersWithRole }}</section>
+                      <img src="./assets/user-avatar.png" alt="">
+                </section>
+            </mat-card>
+      </section>
+      <section class="col">
+          <mat-card class="bg-3 d-flex justify-content-center flex-wrap nowrap ">
+              <section>
+                <section class="card-title" >Usuarios con rol "Admin"</section>
+              </section>
+              <section class="card-text d-flex justify-content-center align-items-center">
+                <section>{{ usersAdmin }}</section>
+                <img src="./assets/user-avatar.png" alt="">
+              </section>
+            </mat-card>
+          
+          <mat-card class="bg-4 d-flex justify-content-center flex-wrap nowrap">
+              <section>
+                  <section class="card-title" >Ultimo Usuario Registrado</section>
+                </section>
+                <section class="card-text d-flex justify-content-center align-items-center">
+                      <section>{{ lastuser }}</section>
+                      <img src="./assets/user-avatar.png" alt="">
+                </section>
+            </mat-card>
+      </section>     
+  </section>
+</section>
+

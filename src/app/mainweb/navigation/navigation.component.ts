@@ -22,7 +22,7 @@ export class NavigationComponent {
   usuariologueado = false;
   
   ngOnInit(){
-    this.usuariologueado = this.autenticacion.isLoggedIn('');
+    this.usuariologueado = this.autenticacion.isLoggedIn();
     this.autenticacion.changeLoginStatus$.subscribe(
     (loggedSatus: boolean) => this.usuariologueado = loggedSatus
     );

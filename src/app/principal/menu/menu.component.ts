@@ -12,7 +12,7 @@ export class MenuComponent {
   constructor(public autenticacion: AutenticacionService){}
   
   ngOnInit(){
-    this.usuariologueado = this.autenticacion.isLoggedIn('');
+    this.usuariologueado = this.autenticacion.isLoggedIn();
     this.autenticacion.changeLoginStatus$.subscribe(
     (loggedSatus: boolean) => this.usuariologueado = loggedSatus
     );

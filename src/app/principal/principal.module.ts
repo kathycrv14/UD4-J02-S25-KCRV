@@ -17,12 +17,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button'
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDividerModule} from '@angular/material/divider';
+import { DialogOverviewComponent } from './dialog-overview/dialog-overview.component';
+import { EditarComponent } from './editar/editar.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,9 @@ import {MatDividerModule} from '@angular/material/divider';
     LoginComponent,
     MensajeComponent,
     OperacionComponent,
+    DialogOverviewComponent,
+    EditarComponent,
+    HomeComponent,
   ],
   imports: [
     CommonModule,
@@ -51,6 +58,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatCheckboxModule,
     MatDividerModule,
     MatTableModule,
+    MatDialogModule,
   ],
   exports:[
     MenuComponent,
@@ -60,6 +68,8 @@ import {MatDividerModule} from '@angular/material/divider';
     LoginComponent,
     MensajeComponent,
     OperacionComponent,
+    DialogOverviewComponent,
+    EditarComponent,
 
     //Angular Material
     MatInputModule,
@@ -72,6 +82,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatCheckboxModule,
     MatDividerModule,
     MatTableModule,
+    MatDialogModule,
   ]
 })
 export class PrincipalModule { }

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -9,33 +9,73 @@ import { Users } from '../models/users';
 })
 export class UserserviceService {
 
-  // Crear una instancia de HttpClient
   constructor(private http: HttpClient) { }
 
-  // Definir la URL (EndPoint) de la API (La BaseURL de la API estara en environment.ts)
-  apiUser = environment.apiURL + 'users/';
+  // Funciones para cada servicios a la API
+  getVista(): Observable<Users[]>{
+    let rutaApi = environment.apiURL + 'vista/'
+    return this.http.get<Users[]>(rutaApi);
+  } 
+  
+  getNuevo(registro: Users): Observable<Users>{
+      let rutaApi = environment.apiURL + 'nuevo/'
+      return this.http.post<Users>(rutaApi, registro); 
+  }
+
+  getBuscar(datosId: string): Observable<Users[]>{
+    let rutaApi = environment.apiURL + 'buscar/' + datosId;
+    return this.http.get<Users[]>(rutaApi);
+  }
+
+  getEliminar(datosId: string): Observable<string>{
+    let rutaApi = environment.apiURL + 'eliminar/' + datosId;
+    return this.http.delete<string>(rutaApi);
+  }
+
+  getEditar(registro: Users): Observable<Users>{
+    let rutaApi = environment.apiURL + 'editar/';
+    return this.http.put<Users>(rutaApi, registro);
+  }
+
+  checkUser(datos: any): Observable<any> {
+    let rutaApi = environment.apiURL + 'check';
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Cache-Control': 'no-cache'
+      })
+    };
+    return this.http.post<any>(rutaApi, datos, httpOptions);
+  }
+  /* apiVista = environment.apiURL + 'vista/';
 
   // Metodos GET para obtener datos de la API users
 
   getUsersAll():Observable<Users[]>{
-    return this.http.get<Users[]>(this.apiUser);
+    return this.http.get<Users[]>(this.apiVista);
   }
 
   getUserId(userId: string): Observable<Users> {
-    const url = this.apiUser + userId;
+    const url = this.apiVista + userId;
     return this.http.get<Users>(url);
-  }
+  }*/
 
   // Metodo POSt para enviar datos a la API users
 
-  postUser(usuario: Users): Observable<Users>{
-    return this.http.post<Users>(this.apiUser, usuario);
+  /* postUser(usuario: Users): Observable<Users>{
+    let nuevo = environment.apiURL + 'nuevo/'
+    return this.http.post<Users>(nuevo, usuario);  
+  } */
+
+  /*
+  // Metodo Delete para eliminar datos a la API users
+
+  deleteUser(usuario: Users): Observable<Users>{
+    let nuevo = environment.apiURL + 'eliminar/'
+    return this.http.post<Users>(nuevo, usuario);  
   }
 
   // Metodo GET para el Interceptor
   getUsersAllInterceptor():Observable<any>{
-    return this.http.get(this.apiUser, {observe: 'response'});
-  }
-
-
+    return this.http.get(this.apiVista, {observe: 'response'});
+  } */
 }

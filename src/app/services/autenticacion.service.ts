@@ -7,29 +7,41 @@ import { Subject } from 'rxjs';
 export class AutenticacionService {
 
   constructor() { }
-
+  readonly ISLOGGEDUSER = 'islogged';
+  readonly ISLOGGEDADMIN = 'islogged';
   readonly ISLOGGEDKEY = 'islogged';
-  public urlUsuarioIntentaAcceder = '';
-
   public changeLoginStatusSubject = new Subject<boolean>();
   public changeLoginStatus$ = this.changeLoginStatusSubject.asObservable();
 
-  login() {
-    localStorage.setItem(this.ISLOGGEDKEY, 'true');
-    this.changeLoginStatusSubject.next(true);
-  }
 
+  getRol(rol:string){
+      if(rol==='Admin'){
+        localStorage.setItem(this.ISLOGGEDADMIN, 'true');
+        this.changeLoginStatusSubject.next(true);
+        return true;
+      }
+      else if(rol==='User'){
+        localStorage.setItem(this.ISLOGGEDUSER, 'true');
+        this.changeLoginStatusSubject.next(true);
+        return true;
+      } 
+      return false;
+  }
   logout() {
-    localStorage.removeItem(this.ISLOGGEDKEY);
+    localStorage.removeItem(this.ISLOGGEDADMIN);
+    localStorage.removeItem(this.ISLOGGEDUSER);
     this.changeLoginStatusSubject.next(false);
+   
   }
 
-  isLoggedIn(url: string) {
-    const isLogged = localStorage.getItem(this.ISLOGGEDKEY);
-    if (!isLogged) {
-      this.urlUsuarioIntentaAcceder = url;
-    return false;
-    }
+   isLoggedIn() {
+    const isLoggedAdmin = localStorage.getItem(this.ISLOGGEDADMIN);
+    const isLoggedUser = localStorage.getItem(this.ISLOGGEDUSER);
+    if (isLoggedAdmin ||isLoggedUser ) {
     return true;
     }
+    else{
+      return false;
+    }
+  }
 }

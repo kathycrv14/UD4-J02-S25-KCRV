@@ -3,6 +3,11 @@
     justify-content: center;
     display: flex;
     flex: wrap;
+
+    background: #e53935;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e35d5b, #e53935);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e35d5b, #e53935); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    min-height: 100%;
 }
 
 h2{
@@ -10,8 +15,8 @@ h2{
     text-transform: uppercase;
     letter-spacing: 1rem;
     font-weight: bolder;
-
 }
+
 .sectionImagen{
     align-items: center;
     justify-content: center;
@@ -32,18 +37,29 @@ img{
     display: block;
     flex: wrap;
 
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    border-radius: 2rem;
+    
+    padding: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.sectionMat{
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex: wrap;
 }
 
 .sectionButton{
     text-align: center;
-}
-
-.sectionMat{
-    width: 30rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 mat-form-field{
     width: 30rem;
+    margin-bottom: 1rem;
 }

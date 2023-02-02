@@ -11,26 +11,31 @@ import { UserserviceService } from 'src/app/services/userservice.service';
 })
 export class FormularioComponent {
 
+  firstname:string ="";
+  redireccion = '' 
+
   constructor(private userService: UserserviceService, private autenticacion: AutenticacionService, private router: Router){}
 
   // Crear objeto que se evniara a al api
-  datos: Users = {id: '', name: '', username:''};
+  datos: Users[] = [{id: '', title: '', firstname:'', lastname:'', email:'', role:'', password:''}];
   
   onSubmit(){
-    this.userService.postUser(this.datos).subscribe(
+    this.userService.getNuevo(this.datos[0]).subscribe(
       (usuario: Users)=>console.log(usuario)
     );
+    this.router.navigate(['/vista']);
   }
   
+    hide = true;
+
     // Angular Material
 
-    redireccion = '';
+    /*redireccion = '';
   
-    login(){
+      login(){
       this.autenticacion.login();
       this.redireccion = this.autenticacion.urlUsuarioIntentaAcceder;
-      this.autenticacion.urlUsuarioIntentaAcceder = '';
-      this.router.navigate([this.redireccion]);
-    }
-    hide = true;
+      this.autenticacion.urlUsuarioIntentaAcceder = ''; 
+      this.router.navigate(['/vista']);
+    } */     
 }

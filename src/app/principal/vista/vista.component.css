@@ -3,11 +3,22 @@
     justify-content: center;
     display: flex;
     flex: wrap;
-}
+
+    min-height: 100%;
+    background: #C9FFBF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFAFBD, #C9FFBF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+};
 
 .sectionTable{
     margin-top: 4rem;
     margin-bottom: 4rem;
+
+    background-color: blue;
+    width: 100%;
+
 }
 
 h2{
@@ -19,10 +30,17 @@ h2{
     padding-bottom: 2rem;
 }
 
-
 thead{
     background-color: rgb(255, 219, 127);
     border-bottom: 2px solid black;
+}
+
+td{
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 th{
@@ -31,4 +49,25 @@ th{
 
 td{
     text-align: center;
+
+}
+
+.sectionButton{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+/*  padding-left: 1rem;
+    padding-right: 1rem; */
+    display: inline-block;
+}
+
+.sectionButton2{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: wrap;
+}
+
+.buttons{
+    padding-left: 1rem;
+    padding-right: 1rem;
 }

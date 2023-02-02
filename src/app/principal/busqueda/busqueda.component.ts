@@ -20,14 +20,14 @@ export class BusquedaComponent {
   
   // Ejecutar el metodo getUsersAll del servicio al cargar el componente
   getUserID(id: string){
-    this.resultado = true;
+    /* this.resultado = true;
     this.user = null;
     this.userService.getUserId(id).subscribe({
       next: (usuario: Users) => {this.user = usuario;  this.vista = false;}
       ,
       error: (e) => {console.error(e); this.resultado = false;},
       complete: () => console.info("La API devolvio un registro")
-    });
+    }); */
   }
 
   ngOnInit(){

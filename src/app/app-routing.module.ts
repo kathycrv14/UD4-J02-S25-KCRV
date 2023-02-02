@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CanactivateGuard } from './canactivate.guard';
 import { CandesactivateGuard } from './candesactivate.guard';
-import { DashboardComponent } from './mainweb/dashboard/dashboard.component';
+
 
 import { EditarComponent } from './principal/editar/editar.component';
 import { FormularioComponent } from './principal/formulario/formulario.component';
@@ -16,8 +16,6 @@ const routes: Routes = [
   {path: 'vista', component: VistaComponent, canActivate: [CanactivateGuard]},
   {path: 'formulario', component: FormularioComponent, canActivate: [CanactivateGuard]},
 
-
-  {path: 'dashboard', component: DashboardComponent, canActivate: [CanactivateGuard]},
 
   {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
